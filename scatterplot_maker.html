@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scatterplot Maker</title>
+
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Scatterplot Maker</h1>
+
+        <label>X Values</label>
+        <input
+                type="text"
+                id="x-values"
+                placeholder="1, 2, 3, 4"
+        >
+
+        <label>Y Values</label>
+        <input
+                type="text"
+                id="y-values"
+                placeholder="2.2, 5, 7, 8"
+        >
+
+        <button onclick="makePlot()">
+            Create Scatterplot
+        </button>
+
+        <div id="graph"></div>
+        <p id="slope-display"></p>
+        <p id="intercept-display"></p>
+
+    </div>
+
+    <script src="scatterplot_maker.js"></script>
+
+</body>
+</html>
