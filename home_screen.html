@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sections Dashboard</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* Dropdown/Collapsible styling */
+        .dropdown {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .dropbtn {
+            width: 100%;
+            padding: 16px 20px;
+            background-color: #ffffff;
+            border: none;
+            outline: none;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropbtn::after {
+            content: '\25BC';
+            font-size: 12px;
+            color: #7f8c8d;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown.active .dropbtn::after {
+            transform: rotate(180deg);
+        }
+
+        .dropbtn:hover {
+            background-color: #f9f9f9;
+        }
+
+        .dropdown-content {
+            display: none;
+            padding: 20px;
+            background-color: #fafafa;
+            border-top: 1px solid #eee;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        /* Scatterplot button styling */
+        .scatter-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .scatter-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Dashboard Menu</h1>
+
+    <!-- 1st Dropdown -->
+    <div class="dropdown active">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Plot Data</button>
+        <div class="dropdown-content">
+            <p>Ready to visualize your metrics? Click below to launch the scatterplot utility.</p>
+            <a href="scatterplot_maker.html" class="scatter-btn">Scatterplot Maker</a>
+        </div>
+    </div>
+
+    <!-- 2nd Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Section Two</button>
+        <div class="dropdown-content">
+            <p>Content for section two goes here.</p>
+        </div>
+    </div>
+
+    <!-- 3rd Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Section Three</button>
+        <div class="dropdown-content">
+            <p>Content for section three goes here.</p>
+        </div>
+    </div>
+
+    <!-- 4th Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Section Four</button>
+        <div class="dropdown-content">
+            <p>Content for section four goes here.</p>
+        </div>
+    </div>
+
+    <!-- 5th Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Section Five</button>
+        <div class="dropdown-content">
+            <p>Content for section five goes here.</p>
+        </div>
+    </div>
+
+    <!-- 6th Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Section Six</button>
+        <div class="dropdown-content">
+            <p>Content for section six goes here.</p>
+        </div>
+    </div>
+
+    <!-- 7th Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Section Seven</button>
+        <div class="dropdown-content">
+            <p>Content for section seven goes here.</p>
+        </div>
+    </div>
+
+    <!-- 8th Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Section Eight</button>
+        <div class="dropdown-content">
+            <p>Content for section eight goes here.</p>
+        </div>
+    </div>
+
+    <!-- 9th Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Section Nine</button>
+        <div class="dropdown-content">
+            <p>Content for section nine goes here.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleDropdown(button) {
+        const dropdown = button.parentElement;
+
+        // close other dropdowns when making a new one
+        const allDropdowns = document.querySelectorAll('.dropdown');
+        allDropdowns.forEach(item => {
+            if (item !== dropdown && item.classList.contains('active')) {
+                item.classList.remove('active');
+            }
+        });
+
+        // toggle the clicked dropdown
+        dropdown.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
