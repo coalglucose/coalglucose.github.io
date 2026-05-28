@@ -17,8 +17,8 @@
   --color-surface2: #3a3a3a;       /* lighter stone */
   --color-text:     #f0f0f0;       /* bright white text */
   --color-muted:    #aaaaaa;       /* gray text */
-  --color-accent:   #5dbb3f;       /* grass green */
-  --color-accent-h: #4da832;       /* darker green hover */
+  --color-accent:   #ce2323;       /* red */
+  --color-accent-h: #cd3333;       /*  redder red*/
   --color-gold:     #ffaa00;       /* Minecraft gold */
   --color-border:   #555555;       /* block edge */
 
