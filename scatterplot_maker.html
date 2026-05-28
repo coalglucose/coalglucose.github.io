@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,31 +15,35 @@
 
 <body>
 
-    <div class="container">
+    <div id="scatter-maker">
 
-        <h1>Scatterplot Maker</h1>
+        <div class="container">
 
-        <label>X Values</label>
-        <input
-                type="text"
-                id="x-values"
-                placeholder="1, 2, 3, 4"
-        >
+            <h1>Scatterplot Maker</h1>
 
-        <label>Y Values</label>
-        <input
-                type="text"
-                id="y-values"
-                placeholder="2.2, 5, 7, 8"
-        >
+            <label>X Values</label>
+            <input
+                    type="text"
+                    id="x-values"
+                    placeholder="1, 2, 3, 4"
+            >
 
-        <button onclick="makePlot()">
-            Create Scatterplot
-        </button>
+            <label>Y Values</label>
+            <input
+                    type="text"
+                    id="y-values"
+                    placeholder="2.2, 5, 7, 8"
+            >
 
-        <div id="graph"></div>
-        <p id="slope-display"></p>
-        <p id="intercept-display"></p>
+            <button onclick="makePlot()">
+                Create Scatterplot
+            </button>
+
+            <div id="graph"></div>
+            <p id="slope-display"></p>
+            <p id="intercept-display"></p>
+
+        </div>
 
     </div>
 
