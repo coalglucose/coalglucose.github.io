@@ -1,0 +1,61 @@
+/* Specific styles for scatterplot_maker.html */
+
+#scatter-maker body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 40px;
+}
+
+#scatter-maker .container {
+    width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+#scatter-maker h1 {
+    text-align: center;
+    color: #333;
+}
+
+#scatter-maker label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#scatter-maker input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#scatter-maker button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+#scatter-maker button:hover {
+    background-color: #0056b3;
+}
+
+#scatter-maker #graph {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
