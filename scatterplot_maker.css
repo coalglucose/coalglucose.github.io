@@ -1,13 +1,11 @@
-/* Specific styles for scatterplot_maker.html */
-
-#scatter-maker body {
+body { 
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     margin: 0;
     padding: 40px;
 }
 
-#scatter-maker .container {
+#scatter-maker .container { 
     width: 700px;
     margin: auto;
     background: white;
