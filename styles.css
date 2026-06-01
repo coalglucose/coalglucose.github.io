@@ -12,15 +12,15 @@
 
 :root {
   /* Minecraft-inspired palette */
-  --color-bg:       #1a1a1a;       /* dark void */
-  --color-surface:  #2d2d2d;       /* stone block */
-  --color-surface2: #3a3a3a;       /* lighter stone */
+  --color-bg:       #ffffff;       /* dark void */
+  --color-surface:  #ffffff;       /* stone block */
+  --color-surface2: #ffe0e0;       /* lighter stone */
   --color-text:     #f0f0f0;       /* bright white text */
-  --color-muted:    #aaaaaa;       /* gray text */
+  --color-muted:    #000000;       /* gray text */
   --color-accent:   #ce2323;       /* red */
   --color-accent-h: #cd3333;       /*  redder red*/
   --color-gold:     #ffaa00;       /* Minecraft gold */
-  --color-border:   #555555;       /* block edge */
+  --color-border:   #ffd8d8;       /* block edge */
 
   --font-mc: 'Minecraftia', monospace;
 
