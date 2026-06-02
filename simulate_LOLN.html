@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law of Large Numbers Simulation</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        canvas {
+            background-color: #2a2a2a;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .stats {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .highlight {
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="container">
+        <h2>Law of Large Numbers</h2>
+        <p>Watch as the cumulative average of a coin flip (Heads = 1, Tails = 0) converges toward the expected theoretical value of <strong>0.5</strong> as the number of flips increases.</p>
+        
+        <canvas id="chart" height="400"></canvas>
+        
+        <div class="stats">
+            <div>Total Flips: <span id="total-flips" class="highlight">0</span></div>
+            <div>Current Average: <span id="current-avg" class="highlight">0.000</span></div>
+        </div>
+    </div>
+    
+    <script src="simulate_LOLN.js"></script>
+
+</body>
+</html>
