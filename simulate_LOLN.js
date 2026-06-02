@@ -62,8 +62,8 @@ function simulateAndDraw() {
     document.getElementById('total-flips').innerText = totalFlips.toLocaleString();
     document.getElementById('current-avg').innerText = (totalHeads / totalFlips).toFixed(4);
 
-    // stop after 5,000 flips
-    if (totalFlips >= 5000) {
+    // stop after 10,000 flips
+    if (totalFlips >= 10000) {
         cancelAnimationFrame(animationId);
         return; // Exit the function to permanently stop
     }
