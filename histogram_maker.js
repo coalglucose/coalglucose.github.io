@@ -16,7 +16,6 @@ function makePlot() {
       return; 
     }
 
-    // --- ADDITION: Create the histogram ---
     let trace = {
       x: xValues,
       type: 'histogram',
