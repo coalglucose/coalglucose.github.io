@@ -96,10 +96,9 @@ nav .logo {
   font-family: var(--font-mc);
   font-size: 1.1rem;
   color: var(--color-accent);
-  text-shadow: 3px 3px 0 #c71585;
   letter-spacing: 1px;
 }
-nav .logo:hover { color: var(--color-gold); text-shadow: 3px 3px 0 #7a5000; }
+nav .logo:hover { color: var(--color-gold); }
 
 nav ul {
   list-style: none;
@@ -110,7 +109,6 @@ nav ul {
 nav ul a {
   color: var(--color-muted);
   font-size: 0.8rem;
-  text-shadow: 2px 2px 0 #000;
 }
 nav ul a:hover { color: var(--color-gold); }
 
@@ -131,7 +129,6 @@ main { flex: 1; }
   line-height: 1.4;
   margin-bottom: 1.5rem;
   color: var(--color-accent);
-  text-shadow: 4px 4px 0 #c71585;
 }
 
 .hero p {
@@ -141,7 +138,6 @@ main { flex: 1; }
   margin-inline: auto;
   margin-bottom: 2.5rem;
   line-height: 2.2;
-  text-shadow: var(--text-shadow);
 }
 
 /* ── Button — classic Minecraft UI bevel ── */
@@ -154,7 +150,6 @@ main { flex: 1; }
   padding: 0.75rem 2rem;
   border: none;
   cursor: pointer;
-  text-shadow: 2px 2px 0 #000;
   letter-spacing: 1px;
   box-shadow:
     inset -3px -3px 0 #111,
@@ -181,14 +176,13 @@ footer {
   font-size: 0.75rem;
   color: var(--color-muted);
   background: var(--color-surface);
-  text-shadow: var(--text-shadow);
 }
 
 /* ── Utility Classes ── */
 .text-center { text-align: center; }
 .text-muted   { color: var(--color-muted); }
-.text-gold    { color: var(--color-gold);   text-shadow: 3px 3px 0 #7a5000; }
-.text-green   { color: var(--color-accent); text-shadow: 3px 3px 0 #1a4a10; }
+.text-gold    { color: var(--color-gold); }
+.text-green   { color: var(--color-accent); }
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
 .mt-4 { margin-top: 2rem; }
