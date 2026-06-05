@@ -6,8 +6,9 @@
 }
 
 @font-face {
-  font-family: 'Minecraftia';
-  src: url('Minecraftia.ttf') format('truetype');
+  font-family: 'Inter';
+  src: url('https://gstatic.com') format('woff2');
+  font-weight: 100 900;
 }
 
 :root {
@@ -22,7 +23,7 @@
   --color-gold:     #ffaa00;       /* Minecraft gold */
   --color-border:   #ffd8d8;       /* block edge */
 
-  --font-mc: 'Minecraftia', monospace;
+  --font-in: 'Inter', monospace;
 
   --radius: 0px;                   /* Minecraft = no rounded corners */
   --max-width: 960px;
@@ -47,7 +48,7 @@ body {
       rgba(255,255,255,0.015) 4px
     );
   color: var(--color-text);
-  font-family: var(--font-mc);
+  font-family: var(--font-in);
   font-size: 14px;
   line-height: 2;
   min-height: 100vh;
