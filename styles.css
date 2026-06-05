@@ -97,7 +97,7 @@ nav .logo {
   font-family: var(--font-mc);
   font-size: 1.1rem;
   color: var(--color-accent);
-  text-shadow: 3px 3px 0 #1a4a10;
+  text-shadow: 3px 3px 0 #c71585;
   letter-spacing: 1px;
 }
 nav .logo:hover { color: var(--color-gold); text-shadow: 3px 3px 0 #7a5000; }
@@ -132,7 +132,7 @@ main { flex: 1; }
   line-height: 1.4;
   margin-bottom: 1.5rem;
   color: var(--color-accent);
-  text-shadow: 4px 4px 0 #1a4a10;
+  text-shadow: 4px 4px 0 #c71585;
 }
 
 .hero p {
