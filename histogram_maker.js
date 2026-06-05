@@ -16,16 +16,21 @@ function makePlot() {
       return; 
     }
 
-    let binWidth = document.getElementById("bin-width").value.trim();
-    if (!binWidth) { 
+    let binWidthInput = document.getElementById("bin-width").value.trim();
+    if (!binWidthInput) { 
       alert("Please enter a value for Bin Width");
       return;
     }
 
-    if (binWidth.isNaN()) {
-      alert("Please enter only numbers.");
-      return;
+    let numberPattern = /^\d+(\.\d+)?$/;
+
+    if (!numberPattern.test(binWidthInput)) {
+        alert("Please enter only one number (no commas, spaces, or symbols)");
+        return;
     }
+    
+    // convert to number
+    let binWidth = Number(binWidthInput);
 
     let trace = {
       x: xValues,
