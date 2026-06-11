@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Box Plot Maker</title>
+
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+    <link rel="stylesheet" href="page_style.css">
+</head>
+
+<body>
+
+    <div id="scatter-maker">
+
+        <div class="container">
+
+            <h1>Box Plot Maker</h1>
+
+            <label>Y Values</label>
+            <input
+                    type="text"
+                    id="y-values"
+                    placeholder="5, 10, 4, 9, 4, 12, 3, 5, 6, 4, 8"
+            >
+
+            <button onclick="makePlot()">
+                Create Box plot
+            </button>
+
+            <div id="graph"></div>
+
+        </div>
+
+    </div>
+
+    <script src="boxplot_maker.js"></script>
+
+</body>
+</html>
