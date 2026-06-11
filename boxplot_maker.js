@@ -19,6 +19,7 @@ function makePlot() {
     let trace = {
       y: yValues,
       type: 'box',
+      name: "",
       marker: {
         color: '#1f77b4',
         line: { color: 'white', width: 1 }
