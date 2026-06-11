@@ -107,25 +107,16 @@
     <h1>Dashboard Menu</h1>
 
     <!-- 1st Dropdown -->
-    <div class="dropdown">
-        <button class="dropbtn" onclick="toggleDropdown(this)">AP Statistics Overview</button>
-        <div class="dropdown-content">
-            <p>Here is an overview of the AP Statistics curriculum!</p>
-        </div>
-    </div>
-    
-    <!-- 2nd Dropdown -->
-    <div class="dropdown">
+    <div class="dropdown active">
         <button class="dropbtn" onclick="toggleDropdown(this)">Plot Data</button>
         <div class="dropdown-content">
             <p>Here are some tools to help with plotting your data!</p>
             <a href="scatterplot_maker.html" class="scatter-btn">Scatterplot Maker</a>
             <a href="histogram_maker.html" class="scatter-btn">Histogram Maker</a>
-            <a href="boxplot_maker.html" class="scatter-btn">Box Plot Maker</a>
         </div>
     </div>
 
-    <!-- 3rd Dropdown -->
+    <!-- 2nd Dropdown -->
     <div class="dropdown">
         <button class="dropbtn" onclick="toggleDropdown(this)">Graphing Distributions</button>
         <div class="dropdown-content">
@@ -134,7 +125,7 @@
         </div>
     </div>
 
-    <!-- 4th Dropdown -->
+    <!-- 3rd Dropdown -->
     <div class="dropdown">
         <button class="dropbtn" onclick="toggleDropdown(this)">Simulations</button>
         <div class="dropdown-content">
@@ -143,15 +134,16 @@
         </div>
     </div>
 
-    <!-- 5th Dropdown -->
+    <!-- 4th Dropdown -->
     <div class="dropdown">
         <button class="dropbtn" onclick="toggleDropdown(this)">Tutorials</button>
         <div class="dropdown-content">
             <p>Here are some tutorials that you may find helpful!</p>
+             <a href="tutorials.html" class="scatter-btn">Tutorials</a>
         </div>
     </div>
 
-    <!-- 6th Dropdown -->
+    <!-- 5th Dropdown -->
     <div class="dropdown">
         <button class="dropbtn" onclick="toggleDropdown(this)">Practice Problems</button>
         <div class="dropdown-content">
@@ -159,7 +151,7 @@
         </div>
     </div>
 
-    <!-- 7th Dropdown -->
+    <!-- 6th Dropdown -->
     <div class="dropdown">
         <button class="dropbtn" onclick="toggleDropdown(this)">AP Statistics Study Resources</button>
         <div class="dropdown-content">
@@ -168,15 +160,23 @@
         </div>
     </div>
 
-    <!-- 8th Dropdown -->
+    <!-- 7th Dropdown -->
     <div class="dropdown">
         <button class="dropbtn" onclick="toggleDropdown(this)">Extra Resources</button>
         <div class="dropdown-content">
             <p>Here are some resources that we recommend that are useful for learning Statistics!</p>
         </div>
     </div>
-</div>
 
+<!-- 8th dropdown!-->
+    <div class="dropdown active">
+        <button class="dropbtn" onclick="toggleDropdown(this)">Graphing Calculator</button>
+        <div class="dropdown-content">
+            <p>Graphing Calculator Simulation!</p>
+            <a href="ti84calc.html" class="scatter-btn">Calculator</a>
+        </div>
+    </div>
+</div>
 <script>
     function toggleDropdown(button) {
         const dropdown = button.parentElement;
