@@ -8,10 +8,10 @@ function makePlot() {
     } 
 
     // string -> array 
-    let xValues = xText.split(',').map(val => Number(val.trim())); 
+    let yValues = yText.split(',').map(val => Number(val.trim())); 
 
     // check if number 
-    if (xValues.some(isNaN)) { 
+    if (yValues.some(isNaN)) { 
       alert("Please enter only numbers."); 
       return; 
     }
