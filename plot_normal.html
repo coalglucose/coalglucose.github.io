@@ -50,6 +50,16 @@
     <div class="container">
         <h2>Normal Distribution Curve (&mu; = 0, &sigma; = 1)</h2>
         <canvas id="distributionCanvas" width="600" height="400"></canvas>
+        <label>z-score value</label>
+        <input
+            type="text"
+            id="z-score"
+            placeholder="2.34"
+        >
+
+        <button onclick="placeMarker()">
+            Place Marker
+        </button>
     </div>
 
     <script src="plot_normal.js"></script>
