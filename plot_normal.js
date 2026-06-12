@@ -114,7 +114,7 @@ function placeMarker(zValue) {
     if (zValue >= minX && zValue <= maxX) {
         const yValue = getNormalPDF(zValue, mean, stdDev);
         const canvasX = mapX(zValue);
-        const canvasY = mapY(y);
+        const canvasY = mapY(yValue);
 
         // Draw a vertical line down to the axis
         ctx.strokeStyle = '#ef4444'; // Red color for the marker
