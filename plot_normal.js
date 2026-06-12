@@ -88,6 +88,59 @@ function drawGraph() {
     ctx.moveTo(points[0].cx, points[0].cy);
     points.forEach(p => ctx.lineTo(p.cx, p.cy));
     ctx.stroke();
+
+    // get input 
+    let zText = document.getElementById("z-score").value.trim(); 
+    if (!yText) { 
+      alert("Please enter z-score value."); 
+      return; 
+    } 
+
+    // string -> array 
+    let zValue = zText.split(',').map(val => Number(val.trim())); 
+
+    // check if number 
+    if (zValue.some(isNaN)) { 
+      alert("Please enter only numbers."); 
+      return; 
+    }
+
+    placeMarker(z)
+}
+
+function placeMarker(zValue) {
+    try {
+    // place marker
+    if (zValue >= minX && zValue <= maxX) {
+        const yValue = getNormalPDF(zValue, mean, stdDev);
+        const canvasX = mapX(zValue);
+        const canvasY = mapY(y);
+
+        // Draw a vertical line down to the axis
+        ctx.strokeStyle = '#ef4444'; // Red color for the marker
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(canvasX, canvasY);
+        ctx.lineTo(canvasX, height - padding);
+        ctx.stroke();
+
+        // Draw a circle/dot at the exact z-score on the curve
+        ctx.fillStyle = '#ef4444';
+        ctx.beginPath();
+        ctx.arc(canvasX, canvasY, 4, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Add a text label
+        ctx.fillStyle = '#ef4444';
+        ctx.font = 'bold 12px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(`Z = ${zValue}`, canvasX, canvasY - 15);
+    }
+    
+  } catch(error) { 
+    alert("Invalid input."); 
+    console.log(error); 
+  } 
 }
 
 drawGraph();
