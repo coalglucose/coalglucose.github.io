@@ -88,7 +88,10 @@ function drawGraph() {
     ctx.moveTo(points[0].cx, points[0].cy);
     points.forEach(p => ctx.lineTo(p.cx, p.cy));
     ctx.stroke();
+}
 
+function placeMarker() {
+    try {
     // get input 
     let zText = document.getElementById("z-score").value.trim(); 
     if (!yText) { 
@@ -104,12 +107,7 @@ function drawGraph() {
       alert("Please enter only numbers."); 
       return; 
     }
-
-    placeMarker(z)
-}
-
-function placeMarker(zValue) {
-    try {
+        
     // place marker
     if (zValue >= minX && zValue <= maxX) {
         const yValue = getNormalPDF(zValue, mean, stdDev);
