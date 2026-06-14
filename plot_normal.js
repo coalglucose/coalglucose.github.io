@@ -94,16 +94,16 @@ function placeMarker() {
     try {
     // get input 
     let zText = document.getElementById("z-score").value.trim(); 
-    if (!yText) { 
+    if (!zText) { 
       alert("Please enter z-score value."); 
       return; 
     } 
 
-    // string -> array 
-    let zValue = zText.split(',').map(val => Number(val.trim())); 
+    // string -> number
+    let zValue = Number(zText)
 
     // check if number 
-    if (zValue.some(isNaN)) { 
+    if (isNaN(zValue)) { 
       alert("Please enter only numbers."); 
       return; 
     }
@@ -133,6 +133,8 @@ function placeMarker() {
         ctx.font = 'bold 12px sans-serif';
         ctx.textAlign = 'center';
         ctx.fillText(`Z = ${zValue}`, canvasX, canvasY - 15);
+    } else {
+        alert("Your z-score value would be outside the graph");
     }
     
   } catch(error) { 
