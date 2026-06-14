@@ -5,32 +5,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="clean_light.css" />
   </head>
   <body>
- 
+
     <header>
-      <nav>
-        <a href="#" class="logo">Logo</a>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+      <nav class="nav">
+        <a href="#" class="nav-brand">Home</a>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
+
     <main>
-      <section class="hero">
+      <section class="hero section container--narrow text-center">
         <h1>Stat Project 2026</h1>
-        <p> Welcome to our website! To get started, click below!</p>
-        <a href="home_screen.html" class="btn">Click Here!</a>
+        <p class="text-muted" style="margin-inline: auto; margin-top: 1rem;">placeholder text placeholder text</p>
+        <div class="cluster cluster-4" style="justify-content: center; margin-top: 2rem;">
+          <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
       </section>
     </main>
- 
-    <footer>
-      <p>&copy; 2026 My Page. All rights reserved.</p>
+
+    <footer style="border-top: 1px solid var(--color-border); padding-block: var(--space-6);">
+      <div class="container">
+        <p class="text-muted text-sm text-center">&copy; 2026 My Page. No Rights reserved.</p>
+      </div>
     </footer>
- 
+
   </body>
 </html>
- 
