@@ -37,25 +37,44 @@ function makePlot() {
 
     const end = Math.ceil((max - min) / binWidth) * binWidth + min;
 
+    let labels = [];
+    let frequencies = [];
+    
+    for (let binStart = min; binStart < end; binStart += binWidth) {
+        let binEnd = binStart + binWidth;
+    
+        labels.push(`${binStart}-${binEnd}`);
+    
+        let count = xValues.filter(x =>
+            x >= binStart &&
+            (x < binEnd || (binEnd === end && x <= binEnd))
+        ).length;
+    
+        frequencies.push(count);
+    }
+    
     let trace = {
-      x: xValues,
-      type: 'histogram',
-      marker: {
-        color: '#1f77b4',
-        line: { color: 'white', width: 1 }
-      },
-      autobinx: false,
-      xbins: {
-        start: min, // set minimum bin edge
-        end: end,   // set maximum bin edge
-        size: binWidth
-      }
+        x: labels,
+        y: frequencies,
+        type: 'bar',
+        marker: {
+            color: '#1f77b4',
+            line: {
+                color: 'white',
+                width: 1
+            }
+        }
     };
 
     let layout = {
-      title: 'Histogram of X Values',
-      xaxis: { title: 'Value' },
-      yaxis: { title: 'Frequency' }
+        title: 'Histogram of X Values',
+        xaxis: {
+            title: 'Bins'
+        },
+        yaxis: {
+            title: 'Frequency'
+        },
+        bargap: 0
     };
 
     Plotly.newPlot('graph', [trace], layout);
