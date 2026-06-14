@@ -32,6 +32,11 @@ function makePlot() {
     // convert to number
     let binWidth = Number(binWidthInput);
 
+    const min = Math.min(...xValues);
+    const max = Math.max(...xValues);
+
+    const end = Math.ceil((max - min) / binWidth) * binWidth + min;
+
     let trace = {
       x: xValues,
       type: 'histogram',
@@ -41,8 +46,8 @@ function makePlot() {
       },
       autobinx: false,
       xbins: {
-        start: Math.min(...xValues), // set minimum bin edge
-        end: Math.max(...xValues),   // set maximum bin edge
+        start: min, // set minimum bin edge
+        end: end,   // set maximum bin edge
         size: binWidth
       }
     };
