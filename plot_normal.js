@@ -138,9 +138,8 @@ function placeMarker() {
     }
     
   } catch(error) { 
-    // alert("Invalid input."); 
+    alert("Invalid input."); 
     console.log(error); 
-    alert(error.message);
   } 
 }
 
