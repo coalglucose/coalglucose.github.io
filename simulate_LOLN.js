@@ -11,8 +11,8 @@ let averages = [];
 let animationId = null;
 
 function simulateAndDraw() {
-    // run 25 flips per frame
-    const flipsPerFrame = 25;
+    // run 50 flips per frame
+    const flipsPerFrame = 50;
     
     for (let i = 0; i < flipsPerFrame; i++) {
         // coin flip
