@@ -1,7 +1,7 @@
 const canvas = document.getElementById('chart');
 const ctx = canvas.getContext('2d');
 
-// set explicit dimensions (prevent blurry drawing)
+// set dimensions
 canvas.width = canvas.getBoundingClientRect().width;
 canvas.height = 400;
 
@@ -11,8 +11,8 @@ let averages = [];
 let animationId = null;
 
 function simulateAndDraw() {
-    // Run 50 flips per frame to speed up the convergence visibility
-    const flipsPerFrame = 50;
+    // run 25 flips per frame
+    const flipsPerFrame = 25;
     
     for (let i = 0; i < flipsPerFrame; i++) {
         // coin flip
@@ -20,15 +20,15 @@ function simulateAndDraw() {
         totalFlips++;
         totalHeads += flip;
         
-        // Track the running average
+        // track running average
         averages.push(totalHeads / totalFlips);
     }
 
-    // Clear canvas for the next frame
+    // clear canvas for the next frame
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw the 0.5 theoretical convergence line
-    const yTheoretical = canvas.height / 2; // Middle of the chart
+    // 0.5 theoretical convergence line
+    const yTheoretical = canvas.height / 2; // middle of the chart
     ctx.strokeStyle = '#777777';
     ctx.lineWidth = 1;
     ctx.setLineDash([4, 4]);
@@ -37,7 +37,7 @@ function simulateAndDraw() {
     ctx.lineTo(canvas.width, yTheoretical);
     ctx.stroke();
 
-    // Draw the cumulative average line (using ALL points to show the whole story)
+    // draw the cumulative average line (use all points)
     ctx.strokeStyle = '#4caf50';
     ctx.lineWidth = 2;
     ctx.setLineDash([]);
@@ -46,7 +46,7 @@ function simulateAndDraw() {
     const step = canvas.width / averages.length;
     for (let i = 0; i < averages.length; i++) {
         const avg = averages[i];
-        // Invert the y-coordinate mapping (0 is at the top of canvas)
+        // invert the y-coordinate mapping (the origin is at the top left, but you want it to be at the bottom right)
         const x = i * step;
         const y = canvas.height - (avg * canvas.height);
         
@@ -58,19 +58,19 @@ function simulateAndDraw() {
     }
     ctx.stroke();
 
-    // Update UI Text
+    // update UI Text
     document.getElementById('total-flips').innerText = totalFlips.toLocaleString();
     document.getElementById('current-avg').innerText = (totalHeads / totalFlips).toFixed(4);
 
     // stop after 10,000 flips
     if (totalFlips >= 10000) {
         cancelAnimationFrame(animationId);
-        return; // Exit the function to permanently stop
+        return;
     }
 
-    // Request the next frame continuously if limit not reached
+    // request next frame continuously if limit not reached
     animationId = requestAnimationFrame(simulateAndDraw);
 }
 
-// Start the animation loop
+// start animation loop
 animationId = requestAnimationFrame(simulateAndDraw);
